@@ -1,0 +1,33 @@
+{
+  "name": "anydoor",
+  "version": "1.0.0",
+  "description": "Tiny Nodejs Static WebServer",
+  "main": "index.js",
+  "scripts": {
+    "fix": "eslint --fix .",
+    "lint": "eslint ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Xeonice/anydoor.git"
+  },
+  "keywords": [
+    "Static",
+    "server"
+  ],
+  "author": "DouglasDong <ad546971975@gmail.com> (http://www.douglasdong.site/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Xeonice/anydoor/issues"
+  },
+  "homepage": "https://github.com/Xeonice/anydoor#readme",
+  "devDependencies": {
+    "babel-eslint": "^8.2.6",
+    "eslint": "^5.2.0",
+    "pre-commit": "^1.2.2"
+  },
+  "pre-commit": [
+    "fix",
+    "lint"
+  ]
+}

@@ -1,0 +1,17 @@
+root = true
+
+#Apply for all files
+[*]
+
+#字符集
+charset = utf-8
+#缩进约定
+indent_style = space
+indent_size = 2
+#回车类型
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+[*.json]
+indent_size = 4
