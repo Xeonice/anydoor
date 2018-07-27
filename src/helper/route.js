@@ -9,7 +9,7 @@ const compress = require('./compress');
 const range = require('./range');
 const isFresh = require('./cache');
 
-const tplPtah = path.join(__dirname, '../template/dir.tpl')
+const tplPtah = path.join(__dirname, '../template/dir.tpl');
 const source = fs.readFileSync(tplPtah);//必须等待这个请求结束才能渲染，因此需要同步加载
 //只会执行一次，之后会调用缓存
 const template = Handlebars.compile(source.toString());//Buffer 转 Str
@@ -50,7 +50,7 @@ module.exports = async function (req, res, filePath, config) {
         title: path.basename(filePath),
         dir: dir ? `/${dir}` : '',
         files
-      }
+      };
       res.end(template(data));
     }
   } catch (ex) {
@@ -59,4 +59,4 @@ module.exports = async function (req, res, filePath, config) {
     res.setHeader('Content-Type', 'text/plain');//找不到时直接返回文本
     res.end(`${filePath} is not a directory or file`);
   }
-}
+};
